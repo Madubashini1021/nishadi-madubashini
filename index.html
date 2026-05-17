@@ -150,6 +150,11 @@
       margin-bottom: 22px;
     }
 
+    .hero-title-smaller {
+      font-size: clamp(2.1rem, 4.8vw, 3.9rem);
+      letter-spacing: -0.055em;
+    }
+
     .hero p {
       color: var(--grey);
       font-size: 1.12rem;
@@ -423,12 +428,13 @@
 <body>
   <header>
     <div class="container nav">
-      <a href="#top" class="logo">Nishadi<span>.</span></a>
+      <a href="#top" class="logo">Nishadi Madubashini<span>.</span></a>
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a class="btn btn-primary" href="Nishadi-Madubashini-CV.pdf" download>Download CV</a>
       </nav>
@@ -439,56 +445,74 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Data Analyst | BI | Python | SQL | Power BI</div>
-          <h1>Turning raw data into clear business insight.</h1>
-          <p>I am a Data Analyst with 3 years of experience in business intelligence, dashboard development, SQL analysis, Python analytics, and predictive modelling. I help teams transform complex data into practical reporting, actionable insights, and better business decisions.</p>
+          <div class="eyebrow">Data Analyst | BI Analyst | SQL | Python | Power BI</div>
+          <h1 class="hero-title-smaller">Data Analyst turning complex data into clear business decisions.</h1>
+          <p>Data Analyst with 2+ years of commercial experience in dashboard development, data storytelling, SQL analysis, Python analytics, ETL workflows, and stakeholder reporting. I build Power BI and Tableau dashboards that turn complex data into clear, actionable business insights.</p>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">View Projects</a>
-            <a class="btn btn-outline" href="Nishadi-Madubashini-CV.pdf" download>Download CV</a>
+            <a class="btn btn-primary" href="Nishadi-Madubashini-CV.pdf" download>Download CV</a>
+            <a class="btn btn-outline" href="#projects">View Projects</a>
+            <a class="btn btn-outline" href="mailto:madubashini1021@gmail.com">Email Me</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><strong>2+ yrs</strong><span>Commercial analytics experience</span></div>
+            <div class="stat"><strong>SQL + Python</strong><span>Data analysis and automation</span></div>
+            <div class="stat"><strong>Power BI</strong><span>Dashboards and KPI reporting</span></div>
+          </div>
+
+          <div class="hero-actions" style="margin-top: 18px; margin-bottom: 0;">
             <a class="btn btn-outline" href="https://github.com/Madubashini1021" target="_blank" rel="noopener">GitHub</a>
             <a class="btn btn-outline" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
-          <div class="stats">
-            <div class="stat"><strong>3+</strong><span>years analytics experience</span></div>
-            <div class="stat"><strong>4</strong><span>portfolio case studies</span></div>
-            <div class="stat"><strong>UK</strong><span>Data Analyst job market focus</span></div>
-          </div>
         </div>
+
         <aside class="profile-card">
-          <h2>What I bring</h2>
+          <h2>Profile Overview</h2>
           <ul>
-            <li>SQL and Python analysis for business reporting</li>
-            <li>Power BI dashboards with KPI and variance tracking</li>
-            <li>Forecasting and customer behaviour analysis</li>
-            <li>ETL workflows, data quality checks, and performance optimisation</li>
-            <li>Clear communication with technical and non-technical stakeholders</li>
+            <li><strong>Target roles:</strong> Data Analyst, BI Analyst, Junior Data Scientist</li>
+            <li><strong>Core tools:</strong> SQL, Python, Power BI, DAX, Excel</li>
+            <li><strong>Business impact:</strong> KPI dashboards, performance tracking, forecasting, and data storytelling for decision-making</li>
+            <li><strong>Data experience:</strong> ETL workflows, data quality, reporting optimisation</li>
+            <li><strong>UK education:</strong> MSc Data Analytics, University of Huddersfield, Merit</li>
+            <li><strong>Availability:</strong> UK-based and open to analytics opportunities</li>
           </ul>
         </aside>
       </div>
-    </section>
-
-    <section id="about">
+    </section><section id="experience">
       <div class="container">
         <div class="section-heading">
-          <h2>About Me</h2>
-          <p>Job-ready Data Analyst focused on turning business questions into reliable analysis, reporting, dashboards, and insight.</p>
+          <h2>Experience Summary</h2>
+          <p>Commercial data experience across dashboard development, SQL/Python analysis, ETL workflows, KPI reporting, data quality, and stakeholder communication.</p>
         </div>
-        <div class="about-grid">
-          <div class="card">
-            <p>I specialise in business intelligence, data visualisation, predictive analytics, and data storytelling. My experience includes building reporting workflows, analysing operational data, developing dashboards, improving data quality, and presenting findings to stakeholders.</p>
-          </div>
-          <div class="card">
-            <p>My portfolio combines commercial-style Power BI reporting, forecasting, streaming data engineering, and machine learning analysis. I am targeting Data Analyst, BI Analyst, Junior Data Scientist, and analytics roles in the UK.</p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <h3>Data Analyst / Data Engineer</h3>
+                <p>Diamond International Lanka Pvt. Ltd, Sri Lanka</p>
+              </div>
+              <span>Jan 2021 – Dec 2023</span>
+            </div>
+            <ul>
+              <li>Analysed business and operational data using SQL and Python to support KPI reporting and management decisions.</li>
+              <li>Gathered reporting requirements from stakeholders and translated them into dashboards, datasets, and repeatable reporting workflows.</li>
+              <li>Supported ETL workflows by preparing, cleaning, validating, and transforming data for analysis and reporting.</li>
+              <li>Built and maintained business reports and dashboards to improve visibility of performance trends and operational issues.</li>
+              <li>Improved data quality by identifying inconsistencies, investigating root causes, and applying validation checks.</li>
+              <li>Optimised reporting workflows and queries to improve reliability, accuracy, and refresh performance.</li>
+              <li>Presented insights clearly to non-technical stakeholders, connecting analysis outputs to business actions.</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="skills">
+<section id="skills">
       <div class="container">
         <div class="section-heading">
-          <h2>Technical Skills</h2>
-          <p>Tools and methods used to analyse data, build dashboards, automate reporting, and support business decisions.</p>
+          <h2>Core Skills</h2>
+          <p>Tools and methods used to build dashboards, analyse data, automate reporting, and communicate insight clearly to business users.</p>
         </div>
         <div class="skills-grid">
           <div class="skill-card">
@@ -515,11 +539,11 @@
       </div>
     </section>
 
-    <section id="projects">
+<section id="projects">
       <div class="container">
         <div class="section-heading">
-          <h2>Projects</h2>
-          <p>Case studies showing how I use data to solve business problems, create insight, and support decision-making.</p>
+          <h2>Key Projects</h2>
+          <p>Selected projects showing dashboarding, data storytelling, forecasting, analytics engineering, and business-focused problem solving.</p>
         </div>
         <div class="projects-grid">
           <article class="project-card">
@@ -529,7 +553,8 @@
             <div class="project-meta">
               <p><strong>Business problem:</strong> Leadership needed a clear view of sales performance, YTD vs PYTD movement, and drivers behind revenue variance.</p>
               <p><strong>Key analysis:</strong> Built KPI cards, YTD/PYTD comparisons, variance analysis, product performance views, country-level insights, and customer analysis.</p>
-              <p><strong>Impact:</strong> Created a single reporting view to help stakeholders identify underperforming areas, compare performance over time, and prioritise action.</p>
+              <p><strong>Impact:</strong> Improved visibility of sales trends, product performance, and country-level performance drivers through a single executive reporting view.</p>
+              <p><strong>Dashboard focus:</strong> KPI cards, YTD vs PYTD tracking, variance analysis, customer analysis, and data storytelling for leadership decisions.</p>
             </div>
             <div class="project-actions">
               <a class="btn btn-primary" href="https://github.com/Madubashini1021/PowerBI-project" target="_blank" rel="noopener">GitHub</a>
@@ -544,7 +569,8 @@
             <div class="project-meta">
               <p><strong>Business problem:</strong> Retail teams need better demand visibility to reduce stock issues and understand customer behaviour patterns.</p>
               <p><strong>Key analysis:</strong> Analysed historical sales and customer behaviour data, prepared modelling datasets, explored trends, and developed forecasting outputs.</p>
-              <p><strong>Impact:</strong> Demonstrated how forecasting can support inventory planning, demand monitoring, and data-led retail decisions.</p>
+              <p><strong>Impact:</strong> Demonstrated how forecasting can support inventory planning, customer demand monitoring, and more data-led retail decisions.</p>
+              <p><strong>Result focus:</strong> Connected customer behaviour patterns with demand forecasting to support stock planning and commercial decision-making.</p>
             </div>
             <div class="project-actions">
               <a class="btn btn-primary" href="https://github.com/Madubashini1021/Data-Visualization-on-Amazon-Customer-Behaviour-Data" target="_blank" rel="noopener">GitHub</a>
@@ -559,7 +585,8 @@
             <div class="project-meta">
               <p><strong>Business problem:</strong> Financial analytics use cases require timely data ingestion, reliable storage, and query-ready datasets.</p>
               <p><strong>Key analysis:</strong> Designed a pipeline using Kafka for streaming ingestion, AWS S3 for storage, Glue for catalogue management, and Athena for querying.</p>
-              <p><strong>Impact:</strong> Showed how raw streaming data can be transformed into an analytics-ready structure for reporting and downstream analysis.</p>
+              <p><strong>Impact:</strong> Showed how raw streaming data can be transformed into an analytics-ready structure for reporting, querying, and downstream analysis.</p>
+              <p><strong>Result focus:</strong> Built an end-to-end pipeline concept from ingestion to cloud storage and SQL-based querying.</p>
             </div>
             <div class="project-actions">
               <a class="btn btn-primary" href="https://github.com/Madubashini1021/Stock-Market-Data-Pipeline-AWS-Kafka-" target="_blank" rel="noopener">GitHub</a>
@@ -574,7 +601,8 @@
             <div class="project-meta">
               <p><strong>Business problem:</strong> M&A decisions need evidence on performance movement, risk indicators, and potential future outcomes.</p>
               <p><strong>Key analysis:</strong> Analysed stock and corporate performance data, compared modelling approaches, and explored forecasting and risk patterns.</p>
-              <p><strong>Impact:</strong> Demonstrated how machine learning and time-series forecasting can support investment research and strategic decision-making.</p>
+              <p><strong>Impact:</strong> Demonstrated how machine learning and time-series forecasting can support investment research, risk analysis, and strategic decision-making.</p>
+              <p><strong>Result focus:</strong> Analysed stock performance and corporate performance patterns to support forecasting and risk-focused insights.</p>
             </div>
             <div class="project-actions">
               <a class="btn btn-primary" href="https://github.com/Madubashini1021/Impact-of-Mergers-and-Acquisition" target="_blank" rel="noopener">GitHub</a>
@@ -585,36 +613,7 @@
       </div>
     </section>
 
-    <section id="experience">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Experience</h2>
-          <p>Commercial data experience across reporting, analysis, ETL workflows, dashboarding, and stakeholder communication.</p>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-top">
-              <div>
-                <h3>Data Analyst / Data Engineer</h3>
-                <p>Diamond International Lanka Pvt. Ltd, Sri Lanka</p>
-              </div>
-              <span>Jan 2021 – Dec 2023</span>
-            </div>
-            <ul>
-              <li>Analysed business and operational data using SQL and Python to support KPI reporting and management decisions.</li>
-              <li>Gathered reporting requirements from stakeholders and translated them into dashboards, datasets, and repeatable reporting workflows.</li>
-              <li>Supported ETL workflows by preparing, cleaning, validating, and transforming data for analysis and reporting.</li>
-              <li>Built and maintained business reports and dashboards to improve visibility of performance trends and operational issues.</li>
-              <li>Improved data quality by identifying inconsistencies, investigating root causes, and applying validation checks.</li>
-              <li>Optimised reporting workflows and queries to improve reliability, accuracy, and refresh performance.</li>
-              <li>Presented insights clearly to non-technical stakeholders, connecting analysis outputs to business actions.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="education">
+<section id="education">
       <div class="container">
         <div class="section-heading">
           <h2>Education</h2>
@@ -634,13 +633,32 @@
       </div>
     </section>
 
-    <section id="contact">
+
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About</h2>
+          <p>Job-ready Data Analyst focused on turning business questions into reliable analysis, reporting, dashboards, and insight.</p>
+        </div>
+        <div class="about-grid">
+          <div class="card">
+            <p>Data Analyst focused on business reporting, dashboards, and insight generation using SQL, Python, and Power BI.</p>
+          </div>
+          <div class="card">
+            <p>Experienced in turning raw data into KPI reporting, trend analysis, and actionable insights for business teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section id="contact">
       <div class="container">
         <div class="contact-box">
           <div>
             <div class="eyebrow">Available for UK data roles</div>
-            <h2>Let’s turn data into business value.</h2>
-            <p>I am open to Data Analyst, BI Analyst, Junior Data Scientist, and Analytics roles where I can apply SQL, Python, Power BI, and data storytelling to support better decisions.</p>
+            <h2>Available for Data Analyst roles in the UK</h2>
+            <p>Open to Data Analyst, BI Analyst, Junior Data Scientist, and Analytics roles. I can support teams with Power BI dashboards, SQL/Python analysis, KPI reporting, and clear data storytelling.</p>
           </div>
           <div class="contact-links">
             <a class="btn btn-primary" href="mailto:madubashini1021@gmail.com">Email Me</a>
