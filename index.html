@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Data Analyst portfolio showcasing SQL, Python, Power BI, dashboard development, predictive analytics, and data engineering projects." />
+  <meta name="description" content="Nishadi Madubashini - Data Analyst portfolio showcasing SQL, Python, Power BI, dashboarding, predictive analytics, and data engineering projects." />
   <title>Nishadi Madubashini | Data Analyst Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,16 +11,15 @@
   <style>
     :root {
       --navy: #071827;
-      --navy-soft: #0d2438;
-      --navy-card: #102b42;
+      --navy-soft: #0e2538;
+      --card: #102b42;
       --white: #ffffff;
-      --grey: #d8e0e8;
-      --muted: #9fb1c1;
-      --accent: #20d3c2;
-      --accent-soft: rgba(32, 211, 194, 0.13);
-      --line: rgba(255, 255, 255, 0.12);
-      --shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
-      --radius: 20px;
+      --grey: #d9e2ec;
+      --muted: #9fb3c8;
+      --accent: #22d3c5;
+      --accent-dark: #14a99d;
+      --border: rgba(255, 255, 255, 0.10);
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
     }
 
     * {
@@ -53,10 +52,10 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 100;
       background: rgba(7, 24, 39, 0.92);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
     }
 
     .nav {
@@ -69,7 +68,7 @@
     .logo {
       font-weight: 800;
       letter-spacing: -0.04em;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
 
     .logo span {
@@ -78,24 +77,14 @@
 
     .nav-links {
       display: flex;
+      gap: 24px;
       align-items: center;
-      gap: 22px;
       font-size: 0.92rem;
       color: var(--grey);
     }
 
     .nav-links a:hover {
       color: var(--accent);
-    }
-
-    .menu-btn {
-      display: none;
-      border: 1px solid var(--line);
-      background: transparent;
-      color: var(--white);
-      border-radius: 10px;
-      padding: 8px 10px;
-      cursor: pointer;
     }
 
     .btn {
@@ -106,202 +95,172 @@
       padding: 12px 18px;
       border-radius: 999px;
       font-weight: 700;
-      font-size: 0.92rem;
-      transition: 0.25s ease;
-      cursor: pointer;
       border: 1px solid transparent;
+      transition: 0.2s ease;
+      cursor: pointer;
     }
 
     .btn-primary {
       background: var(--accent);
-      color: #062027;
-      box-shadow: 0 12px 30px rgba(32, 211, 194, 0.18);
+      color: #062023;
     }
 
     .btn-primary:hover {
+      background: var(--accent-dark);
       transform: translateY(-2px);
-      box-shadow: 0 18px 36px rgba(32, 211, 194, 0.25);
     }
 
-    .btn-secondary {
-      border-color: var(--line);
+    .btn-outline {
+      border-color: var(--border);
       color: var(--white);
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(255,255,255,0.04);
     }
 
-    .btn-secondary:hover {
+    .btn-outline:hover {
       border-color: var(--accent);
       color: var(--accent);
       transform: translateY(-2px);
     }
 
     .hero {
-      padding: 105px 0 80px;
-      background:
-        radial-gradient(circle at top right, rgba(32, 211, 194, 0.18), transparent 32%),
-        linear-gradient(135deg, var(--navy), #081c2c 55%, #06131f);
+      padding: 96px 0 72px;
+      background: radial-gradient(circle at top right, rgba(34, 211, 197, 0.18), transparent 38%), var(--navy);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 46px;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 42px;
       align-items: center;
     }
 
     .eyebrow {
       color: var(--accent);
       font-weight: 800;
+      margin-bottom: 14px;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 0.78rem;
-      margin-bottom: 18px;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
     }
 
     h1 {
-      font-size: clamp(2.5rem, 6vw, 4.7rem);
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
       line-height: 1.02;
       letter-spacing: -0.07em;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
 
-    .hero h1 span {
-      color: var(--accent);
-    }
-
-    .hero-text {
+    .hero p {
       color: var(--grey);
-      max-width: 720px;
-      font-size: 1.08rem;
-      margin-bottom: 30px;
+      font-size: 1.12rem;
+      max-width: 680px;
+      margin-bottom: 28px;
     }
 
     .hero-actions {
       display: flex;
-      flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 34px;
     }
 
-    .hero-stats {
+    .stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
-      margin-top: 30px;
-      max-width: 660px;
     }
 
-    .stat-card {
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .stat-card strong {
-      display: block;
-      font-size: 1.4rem;
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-
-    .stat-card span {
-      color: var(--muted);
-      font-size: 0.86rem;
-    }
-
-    .profile-card {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.05);
-      padding: 26px;
+    .stat, .profile-card, .card, .project-card, .timeline-item {
+      background: rgba(16, 43, 66, 0.86);
+      border: 1px solid var(--border);
+      border-radius: 24px;
       box-shadow: var(--shadow);
     }
 
-    .profile-card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 18px;
+    .stat {
+      padding: 18px;
     }
 
-    .profile-list {
-      display: grid;
-      gap: 14px;
+    .stat strong {
+      display: block;
+      color: var(--accent);
+      font-size: 1.55rem;
+      line-height: 1;
     }
 
-    .profile-item {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--line);
-      color: var(--grey);
-      font-size: 0.92rem;
-    }
-
-    .profile-item:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .profile-item span:first-child {
+    .stat span {
       color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .profile-card {
+      padding: 28px;
+    }
+
+    .profile-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 14px;
+    }
+
+    .profile-card ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      color: var(--grey);
+    }
+
+    .profile-card li::before {
+      content: '•';
+      color: var(--accent);
+      font-weight: 800;
+      margin-right: 10px;
     }
 
     section {
-      padding: 78px 0;
+      padding: 76px 0;
     }
 
     .section-heading {
-      max-width: 760px;
       margin-bottom: 34px;
+      max-width: 760px;
     }
 
     .section-heading h2 {
       font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.08;
       letter-spacing: -0.05em;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
 
     .section-heading p {
-      color: var(--grey);
-      font-size: 1rem;
+      color: var(--muted);
+      font-size: 1.03rem;
     }
 
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 28px;
+      gap: 24px;
     }
 
     .card {
-      background: var(--navy-soft);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
       padding: 26px;
-      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
     }
 
-    .card p, .card li {
+    .card p, .timeline-item p, .project-card p {
       color: var(--grey);
-    }
-
-    .highlight-list {
-      display: grid;
-      gap: 12px;
-      list-style: none;
-    }
-
-    .highlight-list li::before {
-      content: '▹';
-      color: var(--accent);
-      margin-right: 8px;
     }
 
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
+      gap: 16px;
+    }
+
+    .skill-card {
+      padding: 22px;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
     }
 
     .skill-card h3 {
@@ -317,47 +276,43 @@
     }
 
     .tag {
-      padding: 7px 10px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--grey);
       font-size: 0.82rem;
-      font-weight: 600;
+      color: var(--grey);
+      padding: 7px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.03);
     }
 
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      gap: 22px;
     }
 
     .project-card {
+      padding: 26px;
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 16px;
     }
 
     .project-card h3 {
       font-size: 1.35rem;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
     }
 
     .project-summary {
-      color: var(--grey);
+      color: var(--muted) !important;
     }
 
-    .project-block h4 {
+    .project-meta {
+      display: grid;
+      gap: 10px;
+    }
+
+    .project-meta strong {
       color: var(--white);
-      font-size: 0.9rem;
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .project-block p {
-      color: var(--grey);
-      font-size: 0.95rem;
     }
 
     .project-actions {
@@ -369,93 +324,66 @@
 
     .timeline {
       display: grid;
-      gap: 20px;
+      gap: 18px;
     }
 
     .timeline-item {
-      border-left: 3px solid var(--accent);
-      padding-left: 22px;
+      padding: 26px;
     }
 
-    .timeline-item h3 {
-      font-size: 1.2rem;
-      margin-bottom: 4px;
+    .timeline-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
     }
 
-    .timeline-meta {
+    .timeline-top span {
       color: var(--accent);
       font-weight: 700;
-      font-size: 0.92rem;
-      margin-bottom: 12px;
     }
 
-    .timeline ul {
-      padding-left: 18px;
+    .timeline-item ul {
+      margin-top: 14px;
+      padding-left: 20px;
       color: var(--grey);
-    }
-
-    .timeline li {
-      margin-bottom: 8px;
     }
 
     .education-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      gap: 18px;
     }
 
-    .contact {
-      background: linear-gradient(135deg, #081b2b, #0d2438);
-    }
-
-    .contact-card {
+    .contact-box {
+      padding: 34px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(34,211,197,0.18), rgba(16,43,66,0.92));
+      border: 1px solid var(--border);
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
-      gap: 28px;
+      gap: 26px;
       align-items: center;
     }
 
     .contact-links {
-      display: grid;
+      display: flex;
+      flex-wrap: wrap;
       gap: 12px;
-    }
-
-    .contact-links a {
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 14px 16px;
-      color: var(--grey);
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .contact-links a:hover {
-      color: var(--accent);
-      border-color: var(--accent);
+      justify-content: flex-end;
     }
 
     footer {
-      padding: 26px 0;
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
       color: var(--muted);
-      border-top: 1px solid var(--line);
-      text-align: center;
       font-size: 0.9rem;
+      text-align: center;
     }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: 0.55s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .about-grid,
-      .contact-card {
+    @media (max-width: 900px) {
+      .hero-grid, .about-grid, .projects-grid, .education-grid, .contact-box {
         grid-template-columns: 1fr;
       }
 
@@ -463,53 +391,31 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .projects-grid,
-      .education-grid {
-        grid-template-columns: 1fr;
+      .contact-links {
+        justify-content: flex-start;
       }
     }
 
-    @media (max-width: 760px) {
-      .menu-btn {
-        display: inline-flex;
+    @media (max-width: 680px) {
+      .nav {
+        align-items: flex-start;
+        gap: 14px;
       }
 
       .nav-links {
-        position: absolute;
-        top: 68px;
-        left: 4%;
-        right: 4%;
-        flex-direction: column;
-        align-items: flex-start;
-        background: var(--navy-soft);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 18px;
         display: none;
       }
 
-      .nav-links.active {
-        display: flex;
-      }
-
       .hero {
-        padding-top: 78px;
+        padding-top: 70px;
       }
 
-      .hero-stats {
+      .stats, .skills-grid {
         grid-template-columns: 1fr;
-      }
-
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .btn {
-        width: 100%;
       }
 
       section {
-        padding: 58px 0;
+        padding: 56px 0;
       }
     }
   </style>
@@ -517,76 +423,62 @@
 <body>
   <header>
     <div class="container nav">
-      <a href="#home" class="logo">Nishadi<span>.</span>Data</a>
-      <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu">Menu</button>
-      <nav class="nav-links" id="navLinks">
+      <a href="#top" class="logo">Nishadi<span>.</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="Nishadi-Madubashini-CV.pdf" download>Download CV</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero" id="home">
+  <main id="top">
+    <section class="hero">
       <div class="container hero-grid">
-        <div class="reveal">
-          <p class="eyebrow">Data Analyst | BI | Predictive Analytics</p>
-          <h1>Turning raw data into <span>clear business insight</span>.</h1>
-          <p class="hero-text">
-            I am a Data Analyst with 3 years of experience transforming complex datasets into dashboards, reports, forecasts, and decision-ready insights using SQL, Python, Power BI, and data storytelling.
-          </p>
+        <div>
+          <div class="eyebrow">Data Analyst | BI | Python | SQL | Power BI</div>
+          <h1>Turning raw data into clear business insight.</h1>
+          <p>I am a Data Analyst with 3 years of experience in business intelligence, dashboard development, SQL analysis, Python analytics, and predictive modelling. I help teams transform complex data into practical reporting, actionable insights, and better business decisions.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">View Projects</a>
-            <a class="btn btn-secondary" href="Nishadi_Madubashini_CV.pdf" download>Download CV</a>
-            <a class="btn btn-secondary" href="https://github.com/Madubashini1021" target="_blank" rel="noopener">GitHub</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn-outline" href="Nishadi-Madubashini-CV.pdf" download>Download CV</a>
+            <a class="btn btn-outline" href="https://github.com/Madubashini1021" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
-          <div class="hero-stats">
-            <div class="stat-card"><strong>3+</strong><span>Years in data analytics</span></div>
-            <div class="stat-card"><strong>4</strong><span>Portfolio case studies</span></div>
-            <div class="stat-card"><strong>UK</strong><span>Data analyst job market focus</span></div>
+          <div class="stats">
+            <div class="stat"><strong>3+</strong><span>years analytics experience</span></div>
+            <div class="stat"><strong>4</strong><span>portfolio case studies</span></div>
+            <div class="stat"><strong>UK</strong><span>Data Analyst job market focus</span></div>
           </div>
         </div>
-        <aside class="profile-card reveal">
-          <h3>Portfolio focus</h3>
-          <div class="profile-list">
-            <div class="profile-item"><span>Core tools</span><strong>SQL · Python · Power BI</strong></div>
-            <div class="profile-item"><span>Strengths</span><strong>Dashboards · Forecasting · ETL</strong></div>
-            <div class="profile-item"><span>Target roles</span><strong>Data Analyst · BI Analyst</strong></div>
-            <div class="profile-item"><span>Location</span><strong>United Kingdom</strong></div>
-          </div>
+        <aside class="profile-card">
+          <h2>What I bring</h2>
+          <ul>
+            <li>SQL and Python analysis for business reporting</li>
+            <li>Power BI dashboards with KPI and variance tracking</li>
+            <li>Forecasting and customer behaviour analysis</li>
+            <li>ETL workflows, data quality checks, and performance optimisation</li>
+            <li>Clear communication with technical and non-technical stakeholders</li>
+          </ul>
         </aside>
       </div>
     </section>
 
     <section id="about">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading">
           <h2>About Me</h2>
-          <p>A commercially focused Data Analyst who connects technical analysis with practical business decisions.</p>
+          <p>Job-ready Data Analyst focused on turning business questions into reliable analysis, reporting, dashboards, and insight.</p>
         </div>
         <div class="about-grid">
-          <div class="card reveal">
-            <p>
-              I specialise in building reliable reporting workflows, analysing operational and customer data, and creating dashboards that help stakeholders monitor KPIs, understand performance drivers, and take action. My background combines hands-on SQL and Python analysis with Power BI dashboard development and ETL workflow support.
-            </p>
-            <br />
-            <p>
-              I have experience working across reporting requirements, data quality checks, dashboard optimisation, business reporting, and stakeholder communication. I am now focused on Data Analyst, BI Analyst, Junior Data Scientist, and Analytics roles in the UK market.
-            </p>
+          <div class="card">
+            <p>I specialise in business intelligence, data visualisation, predictive analytics, and data storytelling. My experience includes building reporting workflows, analysing operational data, developing dashboards, improving data quality, and presenting findings to stakeholders.</p>
           </div>
-          <div class="card reveal">
-            <ul class="highlight-list">
-              <li>Translate business questions into clear analytical outputs and KPI dashboards.</li>
-              <li>Use SQL and Python to clean, analyse, validate, and model data.</li>
-              <li>Build Power BI dashboards with DAX, Power Query, variance analysis, and trend views.</li>
-              <li>Communicate insights clearly to both technical and non-technical stakeholders.</li>
-              <li>Support data quality, ETL workflows, and reporting performance improvements.</li>
-            </ul>
+          <div class="card">
+            <p>My portfolio combines commercial-style Power BI reporting, forecasting, streaming data engineering, and machine learning analysis. I am targeting Data Analyst, BI Analyst, Junior Data Scientist, and analytics roles in the UK.</p>
           </div>
         </div>
       </div>
@@ -594,30 +486,30 @@
 
     <section id="skills">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading">
           <h2>Technical Skills</h2>
-          <p>Grouped around the tools and capabilities most relevant to analytics, BI, and data-driven decision making.</p>
+          <p>Tools and methods used to analyse data, build dashboards, automate reporting, and support business decisions.</p>
         </div>
         <div class="skills-grid">
-          <div class="card skill-card reveal">
+          <div class="skill-card">
             <h3>Programming & Analytics</h3>
             <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span></div>
           </div>
-          <div class="card skill-card reveal">
+          <div class="skill-card">
             <h3>BI & Visualisation</h3>
             <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">Tableau</span><span class="tag">Excel</span></div>
           </div>
-          <div class="card skill-card reveal">
+          <div class="skill-card">
             <h3>Databases</h3>
             <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">MS SQL Server</span><span class="tag">MongoDB</span><span class="tag">Neo4j</span><span class="tag">Hive</span></div>
           </div>
-          <div class="card skill-card reveal">
+          <div class="skill-card">
             <h3>Cloud & Data Engineering</h3>
-            <div class="tags"><span class="tag">AWS S3</span><span class="tag">Glue</span><span class="tag">Athena</span><span class="tag">Kafka</span><span class="tag">Spark</span><span class="tag">ETL Pipelines</span></div>
+            <div class="tags"><span class="tag">AWS S3</span><span class="tag">Glue</span><span class="tag">Athena</span><span class="tag">Kafka</span><span class="tag">Spark</span><span class="tag">ETL pipelines</span></div>
           </div>
-          <div class="card skill-card reveal">
+          <div class="skill-card">
             <h3>Business Skills</h3>
-            <div class="tags"><span class="tag">KPI Reporting</span><span class="tag">Stakeholder Communication</span><span class="tag">Data Storytelling</span><span class="tag">Requirement Gathering</span></div>
+            <div class="tags"><span class="tag">KPI reporting</span><span class="tag">Data storytelling</span><span class="tag">Requirement gathering</span><span class="tag">Stakeholder communication</span></div>
           </div>
         </div>
       </div>
@@ -625,60 +517,68 @@
 
     <section id="projects">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading">
           <h2>Projects</h2>
-          <p>Case-study style projects showing dashboarding, forecasting, data pipelines, and business-focused analytics.</p>
+          <p>Case studies showing how I use data to solve business problems, create insight, and support decision-making.</p>
         </div>
         <div class="projects-grid">
-          <article class="card project-card reveal">
+          <article class="project-card">
             <h3>Power BI Executive Sales Dashboard</h3>
-            <p class="project-summary">Executive dashboard for monitoring sales performance, product trends, country-level insights, and customer behaviour.</p>
+            <p class="project-summary">Executive dashboard for tracking sales performance, variance, customers, products, and country-level trends.</p>
             <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">SQL</span></div>
-            <div class="project-block"><h4>Business problem</h4><p>Leadership needed a clear view of sales performance, YTD vs PYTD movement, variance drivers, and underperforming areas.</p></div>
-            <div class="project-block"><h4>Key analysis</h4><p>Built KPI cards, YTD/PYTD measures, variance analysis, product performance views, country-level reporting, and customer analysis pages.</p></div>
-            <div class="project-block"><h4>Impact</h4><p>Created a decision-ready dashboard that helps stakeholders identify growth opportunities, performance gaps, and priority customer/product segments.</p></div>
+            <div class="project-meta">
+              <p><strong>Business problem:</strong> Leadership needed a clear view of sales performance, YTD vs PYTD movement, and drivers behind revenue variance.</p>
+              <p><strong>Key analysis:</strong> Built KPI cards, YTD/PYTD comparisons, variance analysis, product performance views, country-level insights, and customer analysis.</p>
+              <p><strong>Impact:</strong> Created a single reporting view to help stakeholders identify underperforming areas, compare performance over time, and prioritise action.</p>
+            </div>
             <div class="project-actions">
               <a class="btn btn-primary" href="https://github.com/Madubashini1021/PowerBI-project" target="_blank" rel="noopener">GitHub</a>
-              <a class="btn btn-secondary" href="#contact">Discuss Case Study</a>
+              <a class="btn btn-outline" href="#contact">Discuss Case Study</a>
             </div>
           </article>
 
-          <article class="card project-card reveal">
+          <article class="project-card">
             <h3>Retail Demand Forecasting</h3>
-            <p class="project-summary">Forecasting and customer behaviour analysis project focused on inventory planning and retail decision support.</p>
+            <p class="project-summary">Forecasting and customer behaviour analysis to support stock planning and commercial decision-making.</p>
             <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Excel</span></div>
-            <div class="project-block"><h4>Business problem</h4><p>Retail teams need better visibility of customer behaviour and demand patterns to support stock planning and reduce avoidable inventory issues.</p></div>
-            <div class="project-block"><h4>Key analysis</h4><p>Analysed customer behaviour, sales trends, demand patterns, and model outputs to support forecasting and planning decisions.</p></div>
-            <div class="project-block"><h4>Impact</h4><p>Demonstrated how predictive analytics can support inventory planning, improve demand visibility, and guide data-driven retail decisions.</p></div>
+            <div class="project-meta">
+              <p><strong>Business problem:</strong> Retail teams need better demand visibility to reduce stock issues and understand customer behaviour patterns.</p>
+              <p><strong>Key analysis:</strong> Analysed historical sales and customer behaviour data, prepared modelling datasets, explored trends, and developed forecasting outputs.</p>
+              <p><strong>Impact:</strong> Demonstrated how forecasting can support inventory planning, demand monitoring, and data-led retail decisions.</p>
+            </div>
             <div class="project-actions">
               <a class="btn btn-primary" href="https://github.com/Madubashini1021/Data-Visualization-on-Amazon-Customer-Behaviour-Data" target="_blank" rel="noopener">GitHub</a>
-              <a class="btn btn-secondary" href="#contact">Discuss Case Study</a>
+              <a class="btn btn-outline" href="#contact">Discuss Case Study</a>
             </div>
           </article>
 
-          <article class="card project-card reveal">
+          <article class="project-card">
             <h3>Real-Time Stock Market Data Pipeline</h3>
-            <p class="project-summary">End-to-end streaming data pipeline from ingestion to cloud storage and SQL-based querying.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">Kafka</span><span class="tag">AWS S3</span><span class="tag">AWS Glue</span><span class="tag">Athena</span><span class="tag">SQL</span><span class="tag">Parquet</span></div>
-            <div class="project-block"><h4>Business problem</h4><p>Financial data needs to be captured, stored, structured, and made queryable for timely analysis and downstream reporting.</p></div>
-            <div class="project-block"><h4>Key analysis</h4><p>Designed a pipeline for streaming ingestion, cloud storage, schema handling, and analytical querying using AWS services and SQL.</p></div>
-            <div class="project-block"><h4>Impact</h4><p>Showcases practical understanding of real-time data movement, data lake storage, and analytics-ready pipeline design.</p></div>
+            <p class="project-summary">End-to-end streaming pipeline from data ingestion to cloud storage and SQL querying.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Apache Kafka</span><span class="tag">AWS S3</span><span class="tag">Glue</span><span class="tag">Athena</span><span class="tag">SQL</span><span class="tag">Parquet</span></div>
+            <div class="project-meta">
+              <p><strong>Business problem:</strong> Financial analytics use cases require timely data ingestion, reliable storage, and query-ready datasets.</p>
+              <p><strong>Key analysis:</strong> Designed a pipeline using Kafka for streaming ingestion, AWS S3 for storage, Glue for catalogue management, and Athena for querying.</p>
+              <p><strong>Impact:</strong> Showed how raw streaming data can be transformed into an analytics-ready structure for reporting and downstream analysis.</p>
+            </div>
             <div class="project-actions">
               <a class="btn btn-primary" href="https://github.com/Madubashini1021/Stock-Market-Data-Pipeline-AWS-Kafka-" target="_blank" rel="noopener">GitHub</a>
-              <a class="btn btn-secondary" href="#contact">Discuss Case Study</a>
+              <a class="btn btn-outline" href="#contact">Discuss Case Study</a>
             </div>
           </article>
 
-          <article class="card project-card reveal">
+          <article class="project-card">
             <h3>AI in Mergers & Acquisitions</h3>
-            <p class="project-summary">Predictive analytics project exploring stock performance, corporate performance, forecasting, and risk analysis around M&A activity.</p>
+            <p class="project-summary">Predictive analytics project focused on stock performance, corporate performance, forecasting, and risk analysis.</p>
             <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">ARIMA</span><span class="tag">LSTM</span><span class="tag">LightGBM</span></div>
-            <div class="project-block"><h4>Business problem</h4><p>Investors and business teams need clearer ways to understand post-merger performance, risk signals, and potential financial outcomes.</p></div>
-            <div class="project-block"><h4>Key analysis</h4><p>Applied statistical and machine learning methods to analyse stock performance, forecast trends, and evaluate corporate performance indicators.</p></div>
-            <div class="project-block"><h4>Impact</h4><p>Demonstrates how AI and forecasting techniques can support risk analysis, market interpretation, and strategic decision making.</p></div>
+            <div class="project-meta">
+              <p><strong>Business problem:</strong> M&A decisions need evidence on performance movement, risk indicators, and potential future outcomes.</p>
+              <p><strong>Key analysis:</strong> Analysed stock and corporate performance data, compared modelling approaches, and explored forecasting and risk patterns.</p>
+              <p><strong>Impact:</strong> Demonstrated how machine learning and time-series forecasting can support investment research and strategic decision-making.</p>
+            </div>
             <div class="project-actions">
               <a class="btn btn-primary" href="https://github.com/Madubashini1021/Impact-of-Mergers-and-Acquisition" target="_blank" rel="noopener">GitHub</a>
-              <a class="btn btn-secondary" href="#contact">Discuss Case Study</a>
+              <a class="btn btn-outline" href="#contact">Discuss Case Study</a>
             </div>
           </article>
         </div>
@@ -687,21 +587,27 @@
 
     <section id="experience">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading">
           <h2>Experience</h2>
-          <p>Professional experience across business reporting, data analysis, dashboarding, ETL support, and stakeholder communication.</p>
+          <p>Commercial data experience across reporting, analysis, ETL workflows, dashboarding, and stakeholder communication.</p>
         </div>
-        <div class="card timeline reveal">
+        <div class="timeline">
           <div class="timeline-item">
-            <h3>Data Analyst / Data Engineer</h3>
-            <p class="timeline-meta">Diamond International Lanka Pvt. Ltd, Sri Lanka · Jan 2021 – Dec 2023</p>
+            <div class="timeline-top">
+              <div>
+                <h3>Data Analyst / Data Engineer</h3>
+                <p>Diamond International Lanka Pvt. Ltd, Sri Lanka</p>
+              </div>
+              <span>Jan 2021 – Dec 2023</span>
+            </div>
             <ul>
-              <li>Gathered reporting requirements and translated business questions into SQL, Python, and dashboard-based analytical outputs.</li>
-              <li>Built and maintained ETL workflows to prepare reliable datasets for operational reporting and business analysis.</li>
-              <li>Developed dashboards and recurring reports to monitor KPIs, trends, performance gaps, and data quality issues.</li>
-              <li>Used SQL and Python to clean, validate, analyse, and transform data for stakeholder-ready reporting.</li>
-              <li>Improved reporting reliability by identifying data quality issues, optimising queries, and supporting workflow performance improvements.</li>
-              <li>Communicated findings clearly to non-technical stakeholders through dashboards, summaries, and business-focused recommendations.</li>
+              <li>Analysed business and operational data using SQL and Python to support KPI reporting and management decisions.</li>
+              <li>Gathered reporting requirements from stakeholders and translated them into dashboards, datasets, and repeatable reporting workflows.</li>
+              <li>Supported ETL workflows by preparing, cleaning, validating, and transforming data for analysis and reporting.</li>
+              <li>Built and maintained business reports and dashboards to improve visibility of performance trends and operational issues.</li>
+              <li>Improved data quality by identifying inconsistencies, investigating root causes, and applying validation checks.</li>
+              <li>Optimised reporting workflows and queries to improve reliability, accuracy, and refresh performance.</li>
+              <li>Presented insights clearly to non-technical stakeholders, connecting analysis outputs to business actions.</li>
             </ul>
           </div>
         </div>
@@ -710,40 +616,38 @@
 
     <section id="education">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading">
           <h2>Education</h2>
-          <p>Academic background in data analytics and information technology.</p>
+          <p>Academic background in data analytics, information technology, and applied analytical methods.</p>
         </div>
         <div class="education-grid">
-          <div class="card reveal">
+          <div class="card">
             <h3>MSc Data Analytics</h3>
             <p>University of Huddersfield, UK</p>
-            <p><strong>Merit · 2025</strong></p>
+            <p><strong>Result:</strong> Merit, 2025</p>
           </div>
-          <div class="card reveal">
+          <div class="card">
             <h3>BSc Information Technology</h3>
-            <p>Sri Lanka Institute of Information Technology, Sri Lanka</p>
-            <p><strong>Information Technology</strong></p>
+            <p>SLIIT, Sri Lanka</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="container contact-card">
-        <div class="section-heading reveal">
-          <h2>Let’s connect</h2>
-          <p>
-            I am open to Data Analyst, BI Analyst, Junior Data Scientist, and Analytics opportunities in the UK. If you are hiring for roles involving SQL, Power BI, Python, dashboards, reporting, or predictive analytics, I would be happy to connect.
-          </p>
-          <br />
-          <a class="btn btn-primary" href="mailto:madubashini1021@gmail.com">Email Me</a>
-        </div>
-        <div class="contact-links reveal">
-          <a href="mailto:madubashini1021@gmail.com">madubashini1021@gmail.com</a>
-          <a href="https://github.com/Madubashini1021" target="_blank" rel="noopener">GitHub: Madubashini1021</a>
-          <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener">LinkedIn Profile</a>
-          <a href="Nishadi_Madubashini_CV.pdf" download>Download CV</a>
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <div class="eyebrow">Available for UK data roles</div>
+            <h2>Let’s turn data into business value.</h2>
+            <p>I am open to Data Analyst, BI Analyst, Junior Data Scientist, and Analytics roles where I can apply SQL, Python, Power BI, and data storytelling to support better decisions.</p>
+          </div>
+          <div class="contact-links">
+            <a class="btn btn-primary" href="mailto:madubashini1021@gmail.com">Email Me</a>
+            <a class="btn btn-outline" href="https://github.com/Madubashini1021" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn-outline" href="Nishadi-Madubashini-CV.pdf" download>Download CV</a>
+          </div>
         </div>
       </div>
     </section>
@@ -751,34 +655,8 @@
 
   <footer>
     <div class="container">
-      <p>© 2026 Nishadi Madubashini. Data Analyst Portfolio.</p>
+      © 2026 Nishadi Madubashini. Data Analyst Portfolio.
     </div>
   </footer>
-
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const navLinks = document.getElementById('navLinks');
-
-    menuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('active'));
-    });
-
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealOnScroll = () => {
-      revealElements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        if (elementTop < window.innerHeight - 80) {
-          element.classList.add('visible');
-        }
-      });
-    };
-
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
-  </script>
 </body>
 </html>
