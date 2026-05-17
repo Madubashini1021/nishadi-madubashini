@@ -10,16 +10,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #071827;
-      --navy-soft: #0e2538;
-      --card: #102b42;
-      --white: #ffffff;
-      --grey: #d9e2ec;
-      --muted: #9fb3c8;
-      --accent: #22d3c5;
-      --accent-dark: #14a99d;
-      --border: rgba(255, 255, 255, 0.10);
-      --shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+      --navy: #f7fafc;
+      --navy-soft: #eef6f7;
+      --card: #ffffff;
+      --white: #102a43;
+      --grey: #334e68;
+      --muted: #627d98;
+      --accent: #2bb3a3;
+      --accent-dark: #1f8f84;
+      --border: rgba(16, 42, 67, 0.10);
+      --shadow: 0 16px 38px rgba(16, 42, 67, 0.08);
     }
 
     * {
@@ -53,7 +53,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(7, 24, 39, 0.92);
+      background: rgba(247, 250, 252, 0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
@@ -102,7 +102,7 @@
 
     .btn-primary {
       background: var(--accent);
-      color: #062023;
+      color: #ffffff;
     }
 
     .btn-primary:hover {
@@ -113,7 +113,7 @@
     .btn-outline {
       border-color: var(--border);
       color: var(--white);
-      background: rgba(255,255,255,0.04);
+      background: rgba(43, 179, 163, 0.06);
     }
 
     .btn-outline:hover {
@@ -124,7 +124,7 @@
 
     .hero {
       padding: 96px 0 72px;
-      background: radial-gradient(circle at top right, rgba(34, 211, 197, 0.18), transparent 38%), var(--navy);
+      background: radial-gradient(circle at top right, rgba(43, 179, 163, 0.16), transparent 38%), linear-gradient(180deg, #f7fafc 0%, #eef6f7 100%);
     }
 
     .hero-grid {
@@ -171,7 +171,7 @@
     }
 
     .stat, .profile-card, .card, .project-card, .timeline-item {
-      background: rgba(16, 43, 66, 0.86);
+      background: rgba(255, 255, 255, 0.92);
       border: 1px solid var(--border);
       border-radius: 24px;
       box-shadow: var(--shadow);
@@ -260,7 +260,7 @@
       padding: 22px;
       border-radius: 22px;
       border: 1px solid var(--border);
-      background: rgba(255,255,255,0.04);
+      background: rgba(43, 179, 163, 0.06);
     }
 
     .skill-card h3 {
@@ -281,7 +281,7 @@
       padding: 7px 10px;
       border: 1px solid var(--border);
       border-radius: 999px;
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.72);
     }
 
     .projects-grid {
@@ -359,7 +359,7 @@
     .contact-box {
       padding: 34px;
       border-radius: 28px;
-      background: linear-gradient(135deg, rgba(34,211,197,0.18), rgba(16,43,66,0.92));
+      background: linear-gradient(135deg, rgba(43,179,163,0.14), rgba(255,255,255,0.96));
       border: 1px solid var(--border);
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
